@@ -1,0 +1,65 @@
+{
+  "suffix": "AIChallengeHCM",
+  "footer": "BT08 – Tư duy thiết kế & UX",
+  "labels": { "hoTen": "Họ tên", "mssv": "MSSV", "stt": "STT", "lop": "Lớp", "email": "Email" },
+  "slides": [
+    { "kind": "title", "title": "ViSight – Trợ lý ảo truy xuất thông tin trong dữ liệu multimedia",
+      "subtitle": "Đề tài dự thi Hội thi Thử thách Trí tuệ nhân tạo TP.HCM 2026 – Bảng A" },
+    { "kind": "bullets", "title": "Giới thiệu cuộc thi", "size": 20, "bullets": [
+      "Đơn vị chủ trì: Sở KH&CN TP.HCM, phối hợp ĐHQG-HCM, Thành Đoàn, HCA",
+      "Bảng A: sinh viên, thanh niên; đội tối đa 5 người",
+      "Đề bài 2026: trợ lý ảo phân tích và truy xuất dữ liệu lớn multimedia",
+      "Thể thức giống LSC/VBS: thi truyền thống và thi tự động",
+      "Mốc: chung kết 12–26/9/2026" ] },
+    { "kind": "bullets", "title": "Vấn đề cần giải quyết", "size": 20, "bullets": [
+      "Quy mô: kho hàng trăm giờ video, phải tìm 1 khoảnh khắc trong vài phút",
+      "Truy vấn: tiếng Việt phức tạp, kết hợp hình, tiếng và chữ",
+      "Công cụ hiện có: nhiều bước, khó dùng khi bị áp lực thời gian",
+      "Rủi ro: dễ nộp nhầm, không hiểu vì sao AI trả kết quả đó" ] },
+    { "kind": "two", "title": "Người dùng mục tiêu (persona giả định)",
+      "left": { "heading": "Minh, 21 tuổi, sinh viên CNTT", "bullets": ["Vai trò: vận hành công cụ khi thi", "Nhu cầu: tìm đúng khung hình nhanh", "Nỗi đau: nhiều bước, dễ nộp nhầm"] },
+      "right": { "heading": "Chị Hạnh, 34 tuổi, biên tập viên tư liệu", "bullets": ["Vai trò: tìm cảnh cũ trong kho đài", "Nhu cầu: tìm theo lời thoại, chữ trên hình", "Nỗi đau: phải nhớ mã video, ngày phát"] } },
+    { "kind": "bullets", "title": "Giải pháp & tính năng chính", "size": 19, "bullets": [
+      "Tổng quan: câu hỏi hiện tại, đồng hồ, trạng thái chỉ mục",
+      "Tìm kiếm: ô mô tả tiếng Việt, chip phương thức, lưới điểm khớp",
+      "Chuỗi sự kiện: truy vấn TRAKE trực quan theo từng bước",
+      "Chi tiết video: timeline nhiệt, lời thoại và chữ trên hình",
+      "Trợ lý AI: chat thu hẹp kết quả, giải thích trọng số",
+      "Nộp đáp án: xác nhận trước khi gửi, lịch sử nộp" ] },
+    { "kind": "layers", "title": "Kiến trúc AI của ViSight", "layers": [
+      { "name": "Dữ liệu", "text": "Video tin tức → tách cảnh và khung hình chính" },
+      { "name": "Hiểu nội dung", "text": "CLIP/LVLM · ASR tiếng Việt · OCR · phát hiện đối tượng" },
+      { "name": "Chỉ mục", "text": "Cơ sở dữ liệu vector + chỉ mục văn bản" },
+      { "name": "Trợ lý", "text": "LLM tách và viết lại truy vấn, xếp hạng, giải thích" },
+      { "name": "Giao diện", "text": "ViSight → máy chủ chấm (DRES)" } ] },
+    { "kind": "flow", "title": "Luồng người dùng chính", "steps": [
+      "Đọc câu hỏi", "Mô tả cảnh hoặc hỏi trợ lý", "Lọc và xem kết quả", "Xem chi tiết video", "Xác nhận nộp", "Câu tiếp theo" ],
+      "note": "Mỗi bước có đồng hồ đếm ngược và trạng thái máy chủ luôn hiển thị." },
+    { "kind": "screen", "title": "Màn hình 1 – Tổng quan phiên thi", "image": "01-tong-quan", "bullets": [
+      "Đồng hồ: luôn hiện, tránh quá giờ", "Câu hỏi: nổi bật, viền amber", "Chỉ mục AI: thấy hệ thống sẵn sàng" ] },
+    { "kind": "screen", "title": "Màn hình 2 – Tìm kiếm", "image": "02-tim-kiem", "bullets": [
+      "Một ô tiếng Việt tự nhiên", "Chip chọn phương thức", "Điểm khớp và nhãn giải thích" ] },
+    { "kind": "screen", "title": "Màn hình 3 – Chuỗi sự kiện", "image": "03-chuoi-su-kien", "bullets": [
+      "Các bước nối bằng mũi tên", "Ràng buộc cùng video, tối đa 60 giây", "Mỗi kết quả là một chuỗi hoàn chỉnh" ] },
+    { "kind": "screen", "title": "Màn hình 4 – Chi tiết video", "image": "04-chi-tiet-video", "bullets": [
+      "Timeline nhiệt đánh dấu đoạn khớp", "Từ khớp tô nền vàng", "Gửi đáp án ngay tại chỗ" ] },
+    { "kind": "screen", "title": "Màn hình 5 – Trợ lý AI", "image": "05-tro-ly-ai", "bullets": [
+      "Tách yêu cầu thành các ý", "Chip gợi ý thu hẹp", "Trọng số và truy vấn viết lại" ] },
+    { "kind": "screen", "title": "Màn hình 6 – Nộp đáp án", "image": "06-nop-dap-an", "bullets": [
+      "Xác nhận trước khi nộp", "Banner kết quả rõ ràng", "Lịch sử nộp bài dạng bảng" ] },
+    { "kind": "bullets", "title": "Nguyên tắc UX đã áp dụng", "size": 19, "bullets": [
+      "Trạng thái hệ thống: đồng hồ, máy chủ luôn hiện",
+      "Nhận biết hơn ghi nhớ: chip, lịch sử",
+      "Phòng lỗi: xác nhận trước khi nộp",
+      "AI minh bạch: giải thích, trọng số",
+      "Hiệu quả: phím tắt, ít bước",
+      "Nhất quán: design tokens dùng chung" ] },
+    { "kind": "bullets", "title": "Demo prototype Figma", "size": 18, "bullets": [
+      "Link: https://www.figma.com/proto/iwptTkrQcd0sGw1QPhYcRI/BT08-ViSight",
+      "Kịch bản: Tổng quan → Tìm kiếm → Chi tiết video → Nộp đáp án",
+      "Tiếp theo: Trợ lý AI → Chuỗi sự kiện",
+      "Ghi chú: dữ liệu và ảnh trong prototype là mô phỏng, chỉ minh họa" ] },
+    { "kind": "end", "title": "Cảm ơn thầy cô và các bạn đã lắng nghe!",
+      "subtitle": "Hướng phát triển: thi chế độ tự động, hỗ trợ truy vấn bằng giọng nói.\nKê khai: thiết kế, code mô phỏng và slide có hỗ trợ của Claude (Anthropic); dữ liệu mô phỏng; ảnh minh họa từ Wikimedia Commons." }
+  ]
+}

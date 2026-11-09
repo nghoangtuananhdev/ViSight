@@ -1,0 +1,12 @@
+{
+  "pluginName": "BT08 ViSight Builder",
+  "pluginId": "bt08-visight-builder",
+  "screens": [
+    { "id": "01-tong-quan",      "file": "01-tong-quan.html",      "name": "01 · Tổng quan",        "width": 1440, "height": 900 },
+    { "id": "02-tim-kiem",       "file": "02-tim-kiem.html",       "name": "02 · Tìm kiếm",         "width": 1440, "height": 900 },
+    { "id": "03-chuoi-su-kien",  "file": "03-chuoi-su-kien.html",  "name": "03 · Chuỗi sự kiện",    "width": 1440, "height": 900 },
+    { "id": "04-chi-tiet-video", "file": "04-chi-tiet-video.html", "name": "04 · Chi tiết video",   "width": 1440, "height": 900 },
+    { "id": "05-tro-ly-ai",      "file": "05-tro-ly-ai.html",      "name": "05 · Trợ lý AI",        "width": 1440, "height": 900 },
+    { "id": "06-nop-dap-an",     "file": "06-nop-dap-an.html",     "name": "06 · Nộp đáp án",       "width": 1440, "height": 900 }
+  ]
+}
