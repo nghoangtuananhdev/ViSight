@@ -1,0 +1,17 @@
+{
+  "name": "visight-prototype",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsx scripts/build.jsx",
+    "check": "npm run build && git diff --exit-code -- app/*.html"
+  },
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "tsx": "4.23.15"
+  }
+}

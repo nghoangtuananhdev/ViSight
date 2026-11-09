@@ -1,0 +1,18 @@
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-group(root) {
+    animation-duration: 160ms;
+    animation-timing-function: ease-out;
+  }
+
+  #app a {
+    transition: scale 140ms ease-out;
+  }
+
+  #app a:active {
+    scale: 0.98;
+  }
+}
